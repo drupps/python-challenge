@@ -1,1 +1,5 @@
 *.csv
+/**PyBank**/.DS_Store
+/**PyPoll**/.DS_Store
+/.DS_Store
+/python_grading_rubric.pdf
