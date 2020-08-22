@@ -27,8 +27,8 @@ with open(csvpath) as csvfile:
         total_votes +=1 #counter to keep track of total votes
 
         name = row[2] #pulling the candidate name from the third column #and storing it in candidates list
-        if name not in candidates: #checking to see the candidate has been added already to the candidate list
-            candidates.append
+        # if name not in candidates: #checking to see the candidate has been added already to the candidate list
+        #     candidates.append(name)
 
 
 
@@ -42,12 +42,12 @@ with open(csvpath) as csvfile:
 
 
     #print(total)
-    print(candidate_dict)
+    #print(candidate_dict)
     
     #print(f'{name}: {percent}% ({total})')
 
 
     print(f"Election Results")
     print(f"-------------------------")
-    print(f"Total Votes: " {total_votes})
+    print(f"Total Votes: {total_votes}")
     print(f"-------------------------")
