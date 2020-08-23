@@ -56,9 +56,9 @@ with open(output_path, 'w') as csvfile:
 
     #writing to the txt file
     csvfile.write(f'Election Results \n----------------------------\n')
-    csvfile.write(f'Total Votes: {total_votes}')
-    csvfile.write(f'{name}: {percent_vote}% ({total_votes})')
-    csvfile.write(f'-------------------------')
-    csvfile.write(f'The Winner: {win_candidate}')
+    csvfile.write(f'Total Votes: {total_votes}\n')
+    csvfile.write(f'{name}: {percent_vote}% ({total_votes})\n')
+    csvfile.write(f'-------------------------\n')
+    csvfile.write(f'The Winner: {win_candidate}\n')
     csvfile.write(f'-------------------------')
    
