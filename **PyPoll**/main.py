@@ -57,7 +57,16 @@ with open(output_path, 'w') as csvfile:
     #writing to the txt file
     csvfile.write(f'Election Results \n----------------------------\n')
     csvfile.write(f'Total Votes: {total_votes}\n')
-    csvfile.write(f'{name}: {percent_vote}% ({total_votes})\n')
+    for name in candidates_dict:
+        votes = candidates_dict[name] #everytime we put a candidates name into the dict, we set that to votes
+        percent_vote = round((votes/total_votes) * 100, 2) #percent vote with
+
+        if (candidates_dict[name] > win_count): #this determines if a candidates vote count is great than the win count
+            win_count = candidates_dict[name] #if the above statement is true, than the winning count is put for the candidate vote count
+            win_candidate = name #assigns the name of the candidate to the win_candidate variable
+
+        csvfile.write(f'{name}: {percent_vote}% ({votes})\n') #holy shit, one result was shown when the print was outside the if statement and now trying it inside shows the four!
+    #csvfile.write(f'{name}: {percent_vote}% ({total_votes})\n')
     csvfile.write(f'-------------------------\n')
     csvfile.write(f'The Winner: {win_candidate}\n')
     csvfile.write(f'-------------------------')
